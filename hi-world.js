@@ -111,3 +111,39 @@ function calculateDiscount (price, discountPercentage) {
     }
 
     dogGreeting()
+
+    // 8. arrows funcions
+    
+    const greeting=function(name){return `Hi, ${name}`}
+    const newGreeting=(name)=>{return `Hi, ${name}`}
+    const newGreetingImplicit=name=>`Hi, ${name}`
+    const newGreetingImplicitWithTwoParameters=(name,lastName)=>`Hi, I'm ${name} ${lastName}`
+
+    const finctionalCharacter={name:'Uncle Ben',messageWithTraditionalFunction:function(message){console.log(`${this.name} says: ${message}`)},messageWithArrowFunction:(message)=>{console.log(`${this.name} says: ${message}`)}}
+
+    finctionalCharacter.messageWithTraditionalFunction('With great power comes great responsability.')
+
+    finctionalCharacter.messageWithArrowFunction('Beware of Doctor Octopus.')
+
+    //9. Funciones constructoras
+
+    function Mokepon (name, ownMessage) {
+        this.name = name
+        this.ataqueType = () => ownMessage
+    }
+   
+    const noChanrmander = new Mokepon("No-Charmander", "Charm Charm")
+    console.log(noChanrmander.name)
+    console.log(noChanrmander.ownMessage)
+    console.log(noChanrmander.ataqueType())
+
+    const MokeponWithArrow = (name, ownMessage) => ({
+        name: name,
+        launchMessage: ownMessage
+    })
+
+    const personalMessage = () => "Attack!!"
+    const noBulbasaur = MokeponWithArrow("No-Bulbasaur", personalMessage)
+
+    console.group(noBulbasaur.name)
+    console.group(noBulbasaur.launchMessage())
