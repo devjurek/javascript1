@@ -5,7 +5,7 @@ The user need:
 1. Sign in the network
 2. The sytem can verific the user
 3. If the user sign correct, the system show up a message with "Bienvendido " + Username, and the timeline.
-4.else create a message "Error " + no show up any timeline
+4.else create a message "Error" + no show up any timeline
 
 */
 
